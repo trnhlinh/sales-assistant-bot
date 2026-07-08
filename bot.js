@@ -483,6 +483,6 @@ app.get('/', (req, res) => {
   res.send('Bot is running!');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🌍 Dummy server đang chạy trên port ${PORT}`);
 });
