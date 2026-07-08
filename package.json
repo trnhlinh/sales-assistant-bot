@@ -1,0 +1,15 @@
+{
+  "name": "sales-assistant-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot hỗ trợ Sale và Marketing cho dự án Pro Trader Bootcamp",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.11.0",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
