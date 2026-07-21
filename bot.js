@@ -16,6 +16,10 @@ if (!TELEGRAM_TOKEN || !GEMINI_API_KEY) {
 
 // 2. Khởi tạo Telegram Bot và Gemini AI
 const bot = new TelegramBot(TELEGRAM_TOKEN, { polling: true });
+
+// Xử lý lỗi polling để tránh bot bị crash khi mất mạng cục bộ
+bot.on("polling_error", (err) => console.log("Polling error:", err));
+
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 const userStates = {}; // Quản lý trạng thái State Machine của từng user
